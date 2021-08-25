@@ -1,8 +1,8 @@
-.flexbox-container {
+.flex-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
-.flexbox-item {
+.flex-item {
     width: 200px;
     height: 200px;
     margin: 10px;
