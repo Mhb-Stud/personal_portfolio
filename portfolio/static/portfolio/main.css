@@ -1,16 +1,57 @@
 .flexbox-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    background-color: aliceblue;
+
 }
 .flexbox-container > * {
-    flex: 1 1;
-    width: 200px;
-    height: 200px;
-    margin: 10px;
-    border: 3px solid black;
-    background-color: pink;
     padding: 5px;
+    flex-grow: 1;
 }
+
+img {
+    height: auto;
+    width: 100%;
+}
+.main-grid{
+    display: grid;
+    grid-template-rows: 0.5fr;
+    justify-items: center;
+    justify-content: center;
+    max-width: 100vh;
+    align-items: center;
+}
+.line{
+    border: 2px solid rgb(0, 0, 0);
+    color: rgb(0,0,0);
+    width: 80%;
+    opacity: 60%;
+}
+.project-flex-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 100vh;
+}
+.project-element-grid {
+    width: 200px;
+    height: 300px;
+    display: grid;
+    grid-template-rows: 0.2fr 1fr 0.2fr;
+    justify-items: center;
+}
+.main-flex-main {
+    display: flex;
+    justify-content: center;
+}
+.god {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 100vh;
+}
+.god-god{
+    display: flex;
+    justify-content: center;
+}
+

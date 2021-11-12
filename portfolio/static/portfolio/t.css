@@ -10,3 +10,7 @@
     background-color: pink;
     padding: 5px;
 }
+img {
+    height: auto;
+    width: 100%;
+}

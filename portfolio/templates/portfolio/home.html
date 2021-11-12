@@ -2,21 +2,39 @@
 
 {% block content %}
 {% load static %}
-<div class="flexbox-container">
-    <h1> mhb_dev's portfolio </h1>
-    <img src ="{% static 'portfolio/Sample Picture - Koala.jpg' %}">
-    <p>Lorem ipsum dolor sit amet, duo elit quaeque adipiscing ut, putent accusata intellegam mea in, pro ei inani congue. Ut eum quem fastidii, essent timeam sit ex, quo malorum tibique apeirian ad. Eam liber ridens convenire ea, cu novum corrumpit est, vim ea eirmod sanctus. Ea vix nihil tempor virtute, oblique corrumpit an pro. Pro no ullum oratio maluisset, et vis porro dictas dolorem. No sit enim numquam, eos ea qualisque ullamcorper.
+<div class="god-god">
+    <div class="god">
+        <div class="main-flex-main">
+            <div class="main-grid">
+                <h1> mhb_dev's portfolio </h1>
 
-Te sit munere invenire indoctum, eu est solet placerat. Id brute indoctum sed, id eos probo integre ponderum, vix eruditi meliore imperdiet eu. Pri malis deseruisse no. Qui modus volutpat delicatissimi et, mel ex illum audiam. Ei pri equidem nusquam dissentias. Eu soluta verear salutandi vix, duo illud iusto voluptaria id.
-    </p>
+                <div class="flexbox-container">
+                    <div class="flexbox-container-inner-item flexbox-container-inner-item-1">
+                      <img src ="{% static 'portfolio/Sample Picture - Koala.jpg' %}">
+                     </div>
+                    <div class="flexbox-container-inner-item flexbox-container-inner-item-1">
+                        <p>Lorem ipsum dolor sit amet, duo elit quaeque adipiscing ut, putent accusata intellegam mea in, pro ei inani congue. Ut eum quem fastidii, essent timeam sit ex, quo malorum tibique apeirian ad. Eam liber ridens convenire ea, cu novum corrumpit est, vim ea eirmod sanctus. Ea vix nihil tempor virtute, oblique corrumpit an pro. Pro no ullum oratio maluisset, et vis porro dictas dolorem. No sit enim numquam, eos ea qualisque ullamcorper.
+                        Te sit munere invenire indoctum, eu est solet placerat. Id brute indoctum sed, id eos probo integre ponderum, vix eruditi meliore imperdiet eu. Pri malis deseruisse no. Qui modus volutpat delicatissimi et, mel ex illum audiam. Ei pri equidem nusquam dissentias. Eu soluta verear salutandi vix, duo illud iusto voluptaria id.
+                        </p>
+                    </div>
+                </div>
+                <hr class="line">
+            </div>
+        </div>
+        <div class="project-flex-container">
+            {% for project in projects %}
+            <div class="project-element-grid">
+                <h2>{{ project.title }}</h2>
+                <img src = "{{  project.image.url }}">
+                <p>{{ project.description }}</p>
+            </div>
 
-    {% for project in projects %}
-        <h2>{{ project.title }}</h2>
-        <p>{{ project.description }}</p>
-        <img src = "{{  project.image.url }}">
-
-
-    {% endfor %}
-    <a href="blog"> go to blogs</a>
+            {% endfor %}
+        </div>
+        <a href="blog"> go to blogs</a>
+    </div>
 </div>
+
+
+
 {% endblock %}
